@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "com.team3630.splineGenerator.Main",
+            "projectName": "splineGenerator"
+        }
+    ]
+}
