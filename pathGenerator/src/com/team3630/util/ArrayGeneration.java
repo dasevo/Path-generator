@@ -129,9 +129,9 @@ public class ArrayGeneration
     public static void writeData() throws IOException
     {
         
-        //generator.writeFileAll(leftX, leftY, leftPos, leftVel, leftAcc, rightX, rightY, rightPos, rightVel, rightAcc);
+        generator.writeFileAll(leftX, leftY, leftPos, leftVel, leftAcc, rightX, rightY, rightPos, rightVel, rightAcc);
 
-        generator.writeArrays(leftX, leftY, leftPos, leftVel, leftAcc, rightX, rightY, rightPos, rightVel, rightAcc);
+        //generator.writeArrays(leftX, leftY, leftPos, leftVel, leftAcc, rightX, rightY, rightPos, rightVel, rightAcc);
 
         generator.finished();
     }

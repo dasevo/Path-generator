@@ -28,6 +28,7 @@ public class Main
         right = pair[1];
 
         ArrayGeneration getArr = new ArrayGeneration(left, right);
+        //ArrayGeneration getArr = new ArrayGeneration(path.base, path.base);
         //System.out.println(path.trajPair[0].getSegment(100).y + "||||||" + path.trajPair[1].getSegment(100).y);
         getArr.setArrays();
         //getArr.printArrays();

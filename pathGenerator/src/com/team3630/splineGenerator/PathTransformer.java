@@ -5,9 +5,9 @@ public class PathTransformer
 
     static Trajectory base;
 
-    public PathTransformer(Trajectory base)
+    public PathTransformer(Trajectory baseIn)
     {
-        this.base = base;
+        base = baseIn;
     }
 
     public static Trajectory[] generateLRTraj()
@@ -20,10 +20,10 @@ public class PathTransformer
         {
             Trajectory.Segment currSeg = base.segments[i];
             double sinHeading = Math.sin(currSeg.heading);
-            double cosHeading = Math.sin(currSeg.heading);
+            double cosHeading = Math.cos(currSeg.heading);
 
-            result[0].segments[i].x = currSeg.x - (Constants.wheelbase / 2 * sinHeading);
-            result[0].segments[i].y = currSeg.y + (Constants.wheelbase / 2 * cosHeading);
+            result[0].segments[i].x = currSeg.x + Constants.wheelbase / 2 * sinHeading;
+            result[0].segments[i].y = currSeg.y - Constants.wheelbase / 2 * cosHeading;
 
             if(i > 0)
             {
@@ -37,8 +37,8 @@ public class PathTransformer
                 result[0].segments[i].acc = (result[0].segments[i].vel - result[0].segments[i-1].vel) * Constants.samples;
             }
 
-            result[1].segments[i].x = currSeg.x + (Constants.wheelbase / 2 * sinHeading);
-            result[1].segments[i].y = currSeg.y + (Constants.wheelbase / 2 * cosHeading);
+            result[1].segments[i].x = currSeg.x - Constants.wheelbase / 2 * sinHeading;
+            result[1].segments[i].y = currSeg.y + Constants.wheelbase / 2 * cosHeading;
 
             if(i >0)
             {

@@ -74,7 +74,7 @@ public class Spline
         target._b = -(2*dTheta0 + dTheta1) / target.directDistance;
         target._c = dTheta0;
 
-        //System.out.println(target._a + "   " + target._b + "  " + target._c);
+        System.out.println(target._a + "   " + target._b + "  " + target._c);
 
         return target;
         
