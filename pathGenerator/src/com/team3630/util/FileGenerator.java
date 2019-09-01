@@ -9,7 +9,7 @@ public class FileGenerator
 
     public FileGenerator() throws IOException
     {
-        fw = new FileWriter("/Users/dasevo/vscode-workspace/generated.txt");
+        fw = new FileWriter("C:/Users/vojta/path.txt");
     }
 
     public static void writeFileAll(double[] leftX, double[] leftY, double[] leftPos, double[] leftVel, double[] leftAcc, 
